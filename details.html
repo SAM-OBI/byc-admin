@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details | BYC</title>
+    <script src="oauth.js"></script>
+
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="shortcut icon" href="./images/BYC LOGO JPG FILE 1.png">
+    <!-- Linewesome -->
+    <link rel="stylesheet" href="lineawesome/css/line-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   <input type="checkbox" id="nav-toggle">
+    <div class="sidebar bg-dark">
+       <div class="sidebar-brand">
+       <!-- <img class="uk-margin-small-right in-offset-top-10" src="img/nan.png" alt="wave" width="95" height="50" data-uk-img> -->
+       BYC
+       </div>
+
+       <div class="sidebar-menu">
+       <ul>
+            <li>
+             <a href="dashboard.html" style="text-decoration: none;"><span class="lar la-chart-bar" style="color: #b6cc00;"></span><span>Dashboard</span></a>
+            </li>
+            <li>
+               <a href="categories.html" style="text-decoration: none;"><span class="las la-layer-group" style="color: #b6cc00;"></span><span>Categories</span></a>
+              </li>
+            <!-- <li>
+              <a href="learning.html" style="text-decoration: none;"><span class="las la-file-upload" style="color: #b6cc00;"></span><span>Learning Materials</span></a>
+            </li>
+            <li>
+                <a href="quiz.html" style="text-decoration: none;"><span class="las la-file-upload" style="color: #b6cc00;"></span><span>Quiz</span></a>
+            </li> -->
+            <li>
+                <a href="admin.html" style="text-decoration: none;"><span class="las la-file-upload" style="color: #b6cc00;"></span><span>Admin Profile</span></a>
+            </li>
+            <li>
+             <a onclick="logout()" style="text-decoration: none;"><span class="las la-lock" style="color: #b6cc00;"></span><span class="logspan">Logout</span></a>
+            </li>
+       </ul>
+    </div>
+    </div>
+
+    <div class="main-content">
+       <header>
+           <h2>
+               <label for="nav-toggle">
+                   <span class="las la-bars"></span>
+               </label>
+                <span class="det"></span>
+           </h2>
+        </header>
+
+       <main>
+            <form class="subForm">
+                        
+                <label for="Name" class="font-mulish font-size-14 font-weight-600">Subcategory Name</label>
+                <input type="text" name="subCatName" id="subCatName" class="input mb-3" placeholder="Enter Sub-category Name">
+
+                <label for="Email" class="font-mulish font-size-14 font-weight-600">Subcategory Images</label>
+                <input type="file" name="subCatImg" id="subCatImg" class="input mb-3" placeholder="Enter Sub-category Image">
+
+                <button class="button button-blue font-weight-700" type="button" onclick="subCategory(event)">
+                    <div class="spinner-border spinner-border-sm text-light spin" role="status">
+                        <span class="sr-only"></span>
+                    </div>
+                    Create Subcategory
+                </button>
+            </form>
+           <div class="subItems">
+               <div class="row">
+                   
+               </div>
+           </div>
+
+           <div id="my-modal-mode" class="mymodal">
+            <div class="modal-content">
+                <div class="modal-header">
+                 <h2>Update Subcategory</h2>
+                    <span class="close" onclick="closeModalMode()">&times;</span>
+                </div>
+                <div class="modal-body">
+                 <form id="updForm">
+                 
+                    <label for="updateSubName" class="font-mulish font-size-14 font-weight-600">SubCategory Name</label>
+                    <input type="text" name="updateSubName" id="updateSubName" class="input mb-3">
+
+                    <label for="updateSubImage" class="font-mulish font-size-14 font-weight-600">SubCategory Images</label>
+                    <input type="file" name="updateSubImage" id="updateSubImage" class="input mb-3">
+    
+                    <button class="button button-blue font-weight-700" onclick="updateSubCategory(event)">
+                        <div class="spinner-border spinner-border-sm text-light spin2" role="status">
+                            <span class="sr-only"></span>
+                        </div>
+                        Update Category
+                    </button>
+                 </form>
+                </div>
+            </div>
+        </div>
+       </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Custom Javascript -->
+    <script src="index.js"></script>
+</body>
+</html>
